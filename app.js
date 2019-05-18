@@ -6,6 +6,8 @@ const responseTime = require('response-time')
 
 app.use(responseTime())
 
+app.use('/', require('./routes/home'))
+
 // 列出全部 Todo
 app.get('/', printRequest, (req, res) => {
   res.send('列出全部 Todo')
