@@ -3,9 +3,6 @@ const app = express()
 const port = 3000
 const moment = require('moment')
 const responseTime = require('response-time')
-// const exphbs = require('express-handlebars')
-// app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
-// app.set('view engine', 'handlebars')
 
 const printRequest = (req, res, next) => {
   const now = moment().format('HH:mm:ss')
