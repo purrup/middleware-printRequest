@@ -11,8 +11,8 @@ app.use(responseTime())
 
 // 列出全部 Todo
 app.get('/', printRequest, (req, res) => {
-  res.send('列出全部 Todo')
-  // res.render('index')
+  // res.send('列出全部 Todo')
+  res.render('index')
 })
 
 // 新增一筆 Todo 頁面
