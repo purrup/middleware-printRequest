@@ -13,10 +13,13 @@ const printRequest = (req, res, next) => {
   const url = req.url
   const timeStamps = `${today} | ${method} from ${url}`
   console.log(timeStamps)
+
+  res.on('finish', () => {
+    const respondTime = res.get('X-Response-Time')
+    const result = `${timeStamps} | total time: ${respondTime}`
+    console.log(result)
+  })
   next()
-  const respondTime = res.get('X-Response-Time')
-  const result = `${timeStamps} | total time: ${respondTime}`
-  console.log(result)
 }
 
 app.use(responseTime())
