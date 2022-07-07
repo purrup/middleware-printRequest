@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "node": "^12.2.0",
     "nodemon": "^1.19.0",
     "response-time": "^2.3.2"
